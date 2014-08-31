@@ -26,6 +26,7 @@ public class TwoDLongestSequence {
 		for(int i=0; i<n; i++){
 			for(int j=0; j<n;j++){
 				if(visited[i][j]) continue;
+				visited[i][j]=true;
 				int smaller=dfs(board, i, j, false);
 				int larger=dfs(board, i, j, true);
 				int len=1+smaller+larger;
